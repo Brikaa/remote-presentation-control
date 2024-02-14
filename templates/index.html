@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote control</title>
+</head>
+<body>
+  <button id="left" class="button">Left</button>
+  <button id="right" class="button">Right</button>
+</body>
+<script>
+  document.getElementById('left').addEventListener('click', () => {
+    fetch('/left');
+  });
+  document.getElementById('right').addEventListener('click', () => {
+    fetch('/right');
+  });
+</script>
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+  button {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+</style>
+</html>
